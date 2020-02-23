@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+:root {
+  --border-color: #e3e5e4;
+  --background-color: #c3c7ca;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comfortaa', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  /* overflow: hidden; */
+}
+
+.draggable-list {
+  padding: 0;
+  list-style-type: none;
+  border: 1px solid var(--border-color);
+  color: #34444f;
+}
+
+.draggable-list li:not(:last-of-type) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.draggable-list .number {
+  height: 60px;
+  width: 60px;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+
+.draggable-list .person-name {
+  margin: 0 20px 0 0;
+}
+
+.draggable-list li.over .draggable {
+  background-color: #eaeaea;
+}
+
+.draggable-list li.wrong .person-name {
+  color: #ff3838;
+}
+
+.draggable-list li.right .person-name {
+  color: #3ae374;
+}
+
+.draggable-list li {
+  display: flex;
+  flex: 1;
+}
+
+.draggable {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.check-btn {
+  border: 0;
+  background-color: var(--background-color);
+  color: #34444f;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  outline: 0;
+}
+
+.check-btn:active {
+  transform: scale(0.98);
+}
